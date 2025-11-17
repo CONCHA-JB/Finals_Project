@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuildRite Co.</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="images/BriX Logo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/FINALS PROJECT/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <ul class="header-top-list">
+
+          <li>
+            <a href="mailto:conchajb8@gmail.com" class="header-top-link">
+              <ion-icon name="mail-outline"></ion-icon>
+
+              <span>conchajb8@gmail.com</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="header-top-link">
+              <ion-icon name="location-outline"></ion-icon>
+
+              <address>Isabang, Giant Compound, LUCENA</address>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <ul class="header-top-social-list">
+
+            <li>
+              <a href="https://www.facebook.com/jb.concha.7" target="_blank" class="header-top-social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+          <a href="#property">
+          <button class="header-top-btn">Shop Now</button>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <a href="#" class="logo">
+          <img src="images/logobuild.png" alt="BuildRite LoGo?">
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <img src="images/logobuild.png" alt="BuildRite LoGo?">
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              </li>
+
+              <li>
+                <a href="#about" class="navbar-link" data-nav-link>About</a>
+              </li>
+
+              <li>
+                <a href="#service" class="navbar-link" data-nav-link>Service</a>
+              </li>
+
+              <li>
+                <a href="#property" class="navbar-link" data-nav-link>Products</a>
+              </li>
+
+              <li>
+                <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+              </li>
+
+              <li>
+                <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+
+        <div class="header-bottom-actions">
+        <!--
+          <button class="header-bottom-actions-btn" aria-label="Search">
+            <ion-icon name="search-outline"></ion-icon>
+
+            <span>Search</span>
+          </button>
+        -->
+          <!--
+          <button class="header-bottom-actions-btn" aria-label="Profile">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <span class="logout-text">Logout</span>
+          </button>
+        -->
+        <a href="/FINALS PROJECT/login.html" target="_blank" class="header-bottom-actions-btn" aria-label="Logout">
+            <ion-icon name="log-out-outline"></ion-icon>
+        </a>
+
+          <button class="header-bottom-actions-btn" aria-label="Cart">
+            <ion-icon name="cart-outline"></ion-icon>
+
+            <span class="cart-count">0</span>
+          </button>
+
+            <!-- Cart dropdown -->
+            <div class="cart-dropdown">
+                <ul class="cart-items"></ul>
+                    <button class="checkout-btn">Checkout</button>
+            </div>
+
+            <!---->
+
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+            <span>Menu</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">
+              <ion-icon name="home"></ion-icon>
+
+              <span>Jb Concha</span>
+            </p>
+
+            <h2 class="h1 hero-title">Buildrite Construction Chemicals</h2>
+
+            <p class="hero-text">
+              Avoid construction failures. Learn from the experts in construction chemicals.
+            </p>
+            <a href="#contact">
+            <button class="btn">Make An Inquiry</button>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="images/buildrite_chemical-removebg-preview.png" alt="Modern house model" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="about" id="about">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="images/QandA.jpg" alt="Jb Concha">
+            <!--
+            <img src="./assets/images/about-banner-2.jpg" alt="House interior" class="abs-img">
+            -->
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">About Us</p>
+
+            <h2 class="h2 section-title">Buildrite Construction Chemicals</h2>
+
+            <p class="about-text">
+              Buildrite Construction Chemicals held a technology launch at the PhilConstruct Expo 2023. It introduced new innovative products under BLOCKOUT PRO Series waterproofing solutions.
+              Over 300 engineers, architects, contractors, and construction enthusiasts joined the technology launch.
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <div class="about-item-icon">
+                  <ion-icon name="cube-outline"></ion-icon>
+                </div>
+
+                <p class="about-item-text">Concrete Solutions</p>
+              </li>
+
+              <li class="about-item">
+                <div class="about-item-icon">
+                  <ion-icon name="water-outline"></ion-icon>
+                </div>
+
+                <p class="about-item-text">Waterproofing Solutions</p>
+              </li>
+
+              <li class="about-item">
+                <div class="about-item-icon">
+                  <ion-icon name="square-outline"></ion-icon>
+                </div>
+
+                <p class="about-item-text">Tiling Solutions</p>
+              </li>
+
+              <li class="about-item">
+                <div class="about-item-icon">
+                  <ion-icon name="shield-checkmark-outline"></ion-icon>
+                </div>
+
+                <p class="about-item-text">Industrial Flooring</p>
+              </li>
+
+            </ul>
+
+            <p class="callout">
+              "We are a construction chemicals and adhesives manufacturer in the Philippines. We provide systems and solutions for your constructions needs such us tiling, flooring, concrete repair, admixtures, finishing, sealants and adhesives, coatings and paints."
+            </p>
+
+            <a href="#service" class="btn">Our Services</a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="service" id="service">
+        <div class="container">
+
+          <p class="section-subtitle">Our Services</p>
+
+          <h2 class="h2 section-title">Our Main Focus</h2>
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="images/sketch1.png" alt="Service icon">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Architecture</a>
+                </h3>
+
+                <p class="card-text">
+                  We are a firm that breathes, believes, and preaches architecture. We believe in nature & its supreme potential to create mesmeric experiences. Our ideas stem from context, interaction, and spatial understanding.
+                </p>
+
+                <a href="#" class="card-link">
+                  <span>See more</span>
+
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="images/helmet1.png" alt="Service icon">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Construction</a>
+                </h3>
+
+                <p class="card-text">
+                Building materials, , flooring, finishing, painting, coatings, adhesives, tiling, sealants, admixtures, concrete, concrete repair, dry mix, construction chemicals, and construction.
+                </p>
+
+                <a href="#" class="card-link">
+                  <span>See more</span>
+
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="images/direct-marketing1.png" alt="Service icon">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <a href="#">Sell Products</a>
+                </h3>
+
+                <p class="card-text">
+                  Among its flagship products are Buildrite Skimcoat, StopGap, Sapal 2 in 1 Elastic Sealant and Waterproofer, RubberStop Rubber Sealant, and the award-winning SmartBond Tile Adhesive.
+                </p>
+
+                <a href="#" class="card-link">
+                  <span>See more</span>
+
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #Products
+      -->
+      <section class="property" id="property">
+        <div class="container">
+
+          <p class="section-subtitle">Products</p>
+
+          <h2 class="h2 section-title">BuildRite Shop</h2>
+
+          <ul class="property-list has-scrollbar">
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="images/buildrite_chemical.png" alt="New Apartment Nice View" class="w-100">
+                  </a>
+
+                  <div class="card-badge green">Best Seller</div>
+
+                  <div class="banner-actions">
+                    <!--
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+
+                      <address>Rotonda, Arias, LUCENA</address>
+                    </button>
+                  -->
+                    <button class="banner-actions-btn">
+                      <ion-icon name="cart-outline"></ion-icon>
+
+                      <span>22</span>
+                    </button>
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="bag-check-outline"></ion-icon>
+
+                      <span>84</span>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                    <strong>₱2,783.00</strong>
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">BUILDRITE LEAK PLUG</a>
+                  </h3>
+
+                  <p class="card-text">
+                    BUILDRITE LEAK PLUG is supplied as a dry powder which only needs water addition to produce an ultra-rapid set plugging mortar.
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>22</strong>
+
+                      <ion-icon name="cart-outline"></ion-icon>
+
+                      <span>Add to Cart</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>84</strong>
+
+                      <ion-icon name="bag-check-outline"></ion-icon>
+
+                      <span>Sold</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>114</strong>
+
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <span>Favorites</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-footer">
+
+                  <div class="card-author">
+
+                    <figure class="author-avatar">
+                      <img src="/FINALS PROJECT/images/pfp.jpg" alt="JB Concha" class="w-100">
+                    </figure>
+
+                    <div>
+                      <p class="author-name">
+                        <a href="#">Jb Concha</a>
+                      </p>
+
+                      <p class="author-title">Members</p>
+                    </div>
+
+                  </div>
+
+                  <div class="card-footer-actions">
+                    <!--
+                    <button class="card-footer-actions-btn">
+                      <ion-icon name="resize-outline"></ion-icon>
+                    </button>
+                -->
+                    <button class="card-footer-actions-btn" data-product="BUILDRITE LEAK PLUG" data-price="2783">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                
+                    <button class="card-footer-actions-btn">
+                      <ion-icon name="add-circle-outline"></ion-icon>
+                    </button>
+                
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="images/buildritecrate.png" alt="JB" class="w-100">
+                  </a>
+                  <!--
+                  <div class="card-badge orange">For Sale</div>
+                  -->
+                  <div class="banner-actions">
+                    <!--
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+                      <address>Rotonda, Arias, LUCENA</address>
+                    </button>
+                  -->
+                    <button class="banner-actions-btn">
+                      <ion-icon name="cart-outline"></ion-icon>
+
+                      <span>17</span>
+                    </button>
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="bag-check-outline"></ion-icon>
+
+                      <span>59</span>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                    <strong>₱2,910.00</strong>
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">BUILDRITE FLEXCRETE 18KG</a>
+                  </h3>
+
+                  <p class="card-text">
+                    BUILDRITE FLEXICRETE is a two component, flexible cementitious waterproofing membrane.  It consists of selected cement blend with high-graded fillers and synthetic resin.
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>17</strong>
+
+                      <ion-icon name="cart-outline"></ion-icon>
+
+                      <span>Add to Cart</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>59</strong>
+
+                      <ion-icon name="bag-check-outline"></ion-icon>
+
+                      <span>Sold</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>67</strong>
+
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <span>Favorites</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-footer">
+
+                  <div class="card-author">
+
+                    <figure class="author-avatar">
+                      <img src="/FINALS PROJECT/images/justin.jpg" alt="Jb Concha" class="w-100">
+                    </figure>
+
+                    <div>
+                      <p class="author-name">
+                        <a href="#">Justin Llyod Montemayor</a>
+                      </p>
+
+                      <p class="author-title">Members</p>
+                    </div>
+
+                  </div>
+
+                  <div class="card-footer-actions">
+                    <!--
+                    <button class="card-footer-actions-btn">
+                      <ion-icon name="resize-outline"></ion-icon>
+                    </button>
+                -->
+                    <button class="card-footer-actions-btn">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                    
+                    <button class="card-footer-actions-btn" data-product="BUILDRITE FLEXCRETE 18KG" data-price="2910">
+                      <ion-icon name="add-circle-outline"></ion-icon>
+                    </button>
+                
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="images/tofil.png" alt="JB" class="w-100">
+                  </a>
+                  <!--
+                  <div class="card-badge green">For Rent</div>
+                  -->
+                  <div class="banner-actions">
+                    <!--
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+                      
+                      <address>Rotonda, Arias, LUCENA</address>
+                    </button>
+                  -->
+                    <button class="banner-actions-btn">
+                      <ion-icon name="cart-outline"></ion-icon>
+
+                      <span>12</span>
+                    </button>
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="bag-check-outline"></ion-icon>
+
+                      <span>31</span>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                    <strong>₱471.00</strong>
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">BUILDRITE TOFIL 801 SKIM COAT SF (White) 20KG</a>
+                  </h3>
+
+                  <p class="card-text">
+                    BUILDRITE SKIM COAT SF is a finishing compound specially formulated for concrete surfaces and pre-casts for indoor and outdoor use.
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>12</strong>
+
+                      <ion-icon name="cart-outline"></ion-icon>
+
+                      <span>Add to Cart</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>31</strong>
+
+                      <ion-icon name="bag-check-outline"></ion-icon>
+
+                      <span>Sold</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>45</strong>
+
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <span>Favorites</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-footer">
+
+                  <div class="card-author">
+
+                    <figure class="author-avatar">
+                      <img src="/FINALS PROJECT/images/marcus.jpg" alt="Jb Concha" class="w-100">
+                    </figure>
+
+                    <div>
+                      <p class="author-name">
+                        <a href="#">Marcus Khyron Corpuz</a>
+                      </p>
+
+                      <p class="author-title">Members</p>
+                    </div>
+
+                  </div>
+
+                  <div class="card-footer-actions">
+                    <!--
+                    <button class="card-footer-actions-btn">
+                      <ion-icon name="resize-outline"></ion-icon>
+                    </button>
+                -->
+                    <button class="card-footer-actions-btn">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                
+                    <button class="card-footer-actions-btn" data-product="BUILDRITE TOFIL 801 SKIM COAT SF (white) 20KG" data-price="471">
+                      <ion-icon name="add-circle-outline"></ion-icon>
+                    </button>
+                
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="property-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="images/epocoat.png" alt="Luxury villa in Rego Park" class="w-100">
+                  </a>
+                  <!--
+                  <div class="card-badge green">For Rent</div>
+                  -->
+                  <div class="banner-actions">
+                    <!--
+                    <button class="banner-actions-btn">
+                      <ion-icon name="location"></ion-icon>
+
+                      <address>Rotonda, Arias, LUCENA</address>
+                    </button>
+                  -->
+                    <button class="banner-actions-btn">
+                      <ion-icon name="cart-outline"></ion-icon>
+
+                      <span>18</span>
+                    </button>
+
+                    <button class="banner-actions-btn">
+                      <ion-icon name="bag-check-outline"></ion-icon>
+
+                      <span>39</span>
+                    </button>
+
+                  </div>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-price">
+                    <strong>₱2,385.00</strong>
+                  </div>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">BUILDRITE EPOCOAT MB PRIMER (White)</a>
+                  </h3>
+
+                  <p class="card-text">
+                    BUILDRITE EPOCOAT MB PRIMER is a two component, 100% solids epoxy specially formulated as a high strength binder for use in light to heavy-duty seamless floor overlay and topping systems. 
+                  </p>
+
+                  <ul class="card-list">
+
+                    <li class="card-item">
+                      <strong>18</strong>
+
+                      <ion-icon name="cart-outline"></ion-icon>
+
+                      <span>Add to Cart</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>39</strong>
+
+                      <ion-icon name="bag-check-outline"></ion-icon>
+
+                      <span>Sold</span>
+                    </li>
+
+                    <li class="card-item">
+                      <strong>53</strong>
+
+                      <ion-icon name="heart-outline"></ion-icon>
+
+                      <span>Favorites</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-footer">
+
+                  <div class="card-author">
+
+                    <figure class="author-avatar">
+                      <img src="/FINALS PROJECT/images/junnleemp.jpg" alt="Jb Concha" class="w-100">
+                    </figure>
+
+                    <div>
+                      <p class="author-name">
+                        <a href="#">Jennel Labuguen</a>
+                      </p>
+
+                      <p class="author-title">Members</p>
+                    </div>
+
+                  </div>
+
+                  <div class="card-footer-actions">
+
+                    <button class="card-footer-actions-btn">
+                      <ion-icon name="resize-outline"></ion-icon>
+                    </button>
+
+                    <button class="card-footer-actions-btn">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+
+                    <button class="card-footer-actions-btn" data-product="BUILDRITE EPOCOAT MB PRIMER (white)" data-price="2385">
+                    <button class="card-footer-actions-btn" >
+                      <ion-icon name="add-circle-outline"></ion-icon>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #Benefits
+      -->
+
+      <section class="features">
+        <div class="container">
+
+          <p class="section-subtitle">Benefits</p>
+
+          <h2 class="h2 section-title">Work with us?</h2>
+
+          <ul class="features-list">
+
+            <li>
+              <a href="#" class="features-card">
+
+                <div class="card-icon">
+                  <ion-icon name="accessibility-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Flexibility</h3>
+
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="features-card">
+
+                <div class="card-icon">
+                  <ion-icon name="people-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Guidance</h3>
+
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="features-card">
+
+                <div class="card-icon">
+                  <ion-icon name="shield-checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Security</h3>
+
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="features-card">
+
+                <div class="card-icon">
+                  <ion-icon name="happy-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Bonus Salary </h3>
+
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="features-card">
+
+                <div class="card-icon">
+                  <ion-icon name="library-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Workspace</h3>
+
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="features-card">
+
+                <div class="card-icon">
+                  <ion-icon name="alarm-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">8hour Shift</h3>
+
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="features-card">
+
+                <div class="card-icon">
+                  <ion-icon name="sparkles-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Promotion</h3>
+
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="features-card">
+
+                <div class="card-icon">
+                  <ion-icon name="cash-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Free OJT</h3>
+
+                <div class="card-btn">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="blog" id="blog">
+        <div class="container">
+
+          <p class="section-subtitle">Blogs</p>
+
+          <h2 class="h2 section-title">Latest News Feeds</h2>
+
+          <ul class="blog-list has-scrollbar">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="images/blog1.jpg" alt="Let's Fix It" class="w-100">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-content-top">
+
+                    <ul class="card-meta-list">
+
+                      <li>
+                        <a href="#" class="card-meta-link">
+                          <ion-icon name="person"></ion-icon>
+
+                          <span>by: Admin</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="card-meta-link">
+                          <ion-icon name="pricetags"></ion-icon>
+
+                          <span>Advertisement</span>
+                        </a>
+                      </li>
+
+                    </ul>
+
+                    <h3 class="h3 blog-title">
+                      <a href="#">LEVEL UP 410—a versatile self-leveling compound designed for deep pours and precision elevation adjustments. </a>
+                    </h3>
+
+                  </div>
+
+                  <div class="blog-content-bottom">
+                    <div class="publish-date">
+                      <ion-icon name="calendar"></ion-icon>
+
+                      <time datetime="2022-27-04">Apr 9, 2024</time>
+                    </div>
+
+                    <a href="#" class="read-more-btn">Read More</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="images/blog2.jpg" alt="Recent Commercial Real Estate Transactions" class="w-100">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-content-top">
+
+                    <ul class="card-meta-list">
+
+                      <li>
+                        <a href="#" class="card-meta-link">
+                          <ion-icon name="person"></ion-icon>
+
+                          <span>by: Admin</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="card-meta-link">
+                          <ion-icon name="pricetags"></ion-icon>
+
+                          <span>Quote</span>
+                        </a>
+                      </li>
+
+                    </ul>
+
+                    <h3 class="h3 blog-title">
+                      <a href="#">This step is crucial, especially during the summer season when temperatures are very high, to prevent chalking and achieve a flawless finish.</a>
+                    </h3>
+
+                  </div>
+
+                  <div class="blog-content-bottom">
+                    <div class="publish-date">
+                      <ion-icon name="calendar"></ion-icon>
+
+                      <time datetime="2022-27-04">Apr 10, 2024</time>
+                    </div>
+
+                    <a href="#" class="read-more-btn">Read More</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+                  <img src="images/blog3.jpg" alt="Renovating a Living Room? Experts Share Their Secrets"
+                    class="w-100">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-content-top">
+
+                    <ul class="card-meta-list">
+
+                      <li>
+                        <a href="#" class="card-meta-link">
+                          <ion-icon name="person"></ion-icon>
+
+                          <span>by: Admin</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="card-meta-link">
+                          <ion-icon name="pricetags"></ion-icon>
+
+                          <span>Advertisement</span>
+                        </a>
+                      </li>
+
+                    </ul>
+
+                    <h3 class="h3 blog-title">
+                      <a href="#">Inadequate placement, incorrect proportions, and errors in the water-cement ratio of concrete mixes often lead to the formation of concrete honeycombs and significant voids.</a>
+                    </h3>
+
+                  </div>
+
+                  <div class="blog-content-bottom">
+                    <div class="publish-date">
+                      <ion-icon name="calendar"></ion-icon>
+
+                      <time datetime="2022-27-04">Apr 12, 2024</time>
+                    </div>
+
+                    <a href="#" class="read-more-btn">Read More</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta">
+        <div class="container">
+
+          <div class="cta-card">
+            <div class="card-content">
+              <h2 class="h2 card-title">For more information on BCC</h2>
+
+              <p class="card-text">Visit their website, www.magnaprime.com.ph, and follow their Facebook Page, @BuildritePhils.</p>
+            </div>
+
+            <button class="btn cta-btn">
+              <span>Thank You</span>
+
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+<div id="contact"></div>
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="images/neworange.png" alt="Jb Concha">
+          </a>
+
+          <p class="section-text">
+            Adhesive and construction chemical producer that conducts its own product research and development.
+          </p>
+
+          <ul class="contact-list">
+
+            <li>
+              <a href="#" class="contact-link">
+                <ion-icon name="location-outline"></ion-icon>
+
+                <address>Isabang, Giant Compound, LUCENA</address>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+0123456789" class="contact-link">
+                <ion-icon name="call-outline"></ion-icon>
+
+                <span>93+ 951-4797-005</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:contact@conchajb8@gmail.com" class="contact-link">
+                <ion-icon name="mail-outline"></ion-icon>
+
+                <span>contact@conchajb8@gmail.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.facebook.com/jb.concha.7" target="_blank" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/jb-c-3228532a0/" target="_blank" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="#about" class="footer-link">About</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="footer-link">Blog</a>
+            </li>
+
+            <li>
+              <a href="#property" class="footer-link">All Products</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Features</p>
+            </li>
+            <!--
+            <li>
+              <a href="#" class="footer-link">Wish List</a>
+            </li>
+          -->
+            <li>
+              <a href="#" class="footer-link">Terms & Conditions</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Customer Care</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+            <!--
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+          -->
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 <a href="#">JbConcha</a>. All Rights Reserved
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="/FINALS PROJECT/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

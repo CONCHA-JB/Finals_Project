@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #f8fbff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .auth-card {
+      max-width: 400px;
+      margin: auto;
+      margin-top: 5rem;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(10, 37, 64, 0.12);
+      overflow: hidden;
+    }
+    .auth-header {
+      background: linear-gradient(135deg, #2f6fd3, #1b4e8b);
+      color: #fff;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .nav-tabs .nav-link {
+      border: none;
+      font-weight: 500;
+      color: #64748b;
+    }
+    .nav-tabs .nav-link.active {
+      color: #2f6fd3;
+      border-bottom: 2px solid #2f6fd3;
+      background-color: transparent;
+    }
+    .form-control {
+      border-radius: .5rem;
+      transition: border-color 0.2s ease;
+    }
+    .form-control.is-valid { border-color: #198754; }
+    .form-control.is-invalid { border-color: #dc3545; }
+    .btn-primary {
+      background: linear-gradient(135deg, #2f6fd3, #1b4e8b);
+      border: none;
+      border-radius: .5rem;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #4a8cf0, #2f6fd3);
+    }
+    .form-footer {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    .form-footer a {
+      color: #2f6fd3;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .form-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="auth-card">
+    <div class="auth-header">
+      <h4 class="mb-0">‎ </h4>
+    </div>
+    <ul class="nav nav-tabs justify-content-center mt-3" id="authTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Login</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab">Signup</button>
+      </li>
+    </ul>
+    <div class="tab-content p-4" id="authTabsContent">
+      <div class="tab-pane fade show active" id="login" role="tabpanel">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Enter password" required>
+          </div>
+          <div id="loginMessage" class="alert alert-danger d-none" role="alert"></div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        <div class="form-footer mt-4">
+          Create an account <a href="#" onclick="document.getElementById('signup-tab').click()">Signup now</a>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="signup" role="tabpanel">
+        <form id="signupForm">
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="signupName" placeholder="Your name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="signupEmail" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Create Password</label>
+            <input type="password" class="form-control" id="signupPassword" placeholder="Choose password" required>
+          </div>
+          <div id="signupMessage" class="alert d-none" role="alert"></div>
+          <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        </form>
+        <div class="form-footer mt-4">
+          Already have an account? <a href="#" onclick="document.getElementById('login-tab').click()">Login here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const signupForm = document.getElementById('signupForm');
+      const signupEmailInput = document.getElementById('signupEmail');
+      const signupPasswordInput = document.getElementById('signupPassword');
+      const signupMessage = document.getElementById('signupMessage');
+      const loginTabButton = document.getElementById('login-tab');
+
+      const getAccounts = () => {
+        const accountsJson = localStorage.getItem('userAccounts');
+        return accountsJson ? JSON.parse(accountsJson) : [];
+      };
+
+      const saveAccounts = (accounts) => {
+        localStorage.setItem('userAccounts', JSON.stringify(accounts));
+      };
+
+      const setFieldFeedback = (input, isSuccess) => {
+        if (!input) return;
+        input.classList.remove('is-valid', 'is-invalid');
+        if (isSuccess !== null) {
+          input.classList.add(isSuccess ? 'is-valid' : 'is-invalid');
+        }
+      };
+
+      const displayAuthMessage = (element, message, type) => {
+        if (!element) return;
+        element.textContent = message;
+        element.className = 'alert alert-' + type + ' mt-3';
+        element.classList.remove('d-none');
+        setTimeout(() => {
+          element.classList.add('d-none');
+        }, 5000);
+      };
+
+      if (signupForm) {
+        signupForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          setFieldFeedback(signupEmailInput, null);
+          setFieldFeedback(signupPasswordInput, null);
+
+          const email = signupEmailInput.value.toLowerCase();
+          const password = signupPasswordInput.value;
+          const name = document.getElementById('signupName').value;
+          const accounts = getAccounts();
+
+          if (accounts.some(account => account.email === email)) {
+            setFieldFeedback(signupEmailInput, false);
+            displayAuthMessage(signupMessage, 'Error: An account with this email already exists.', 'danger');
+            return;
+          }
+
+          if (password.length < 6) {
+            setFieldFeedback(signupPasswordInput, false);
+            displayAuthMessage(signupMessage, 'Password must be at least 6 characters long.', 'danger');
+            return;
+          }
+
+          const newAccount = { email, password, name };
+          accounts.push(newAccount);
+          saveAccounts(accounts);
+
+          setFieldFeedback(signupEmailInput, true);
+          setFieldFeedback(signupPasswordInput, true);
+          displayAuthMessage(signupMessage, 'Success! Account created.', 'success');
+          signupForm.reset();
+
+          setTimeout(() => {
+            loginTabButton.click();
+            setFieldFeedback(document.getElementById('loginEmail'), null);
+            setFieldFeedback(document.getElementById('loginPassword'), null);
+          }, 1500);
+        });
+      }
+      const loginForm = document.getElementById('loginForm');
+      const loginEmailInput = document.getElementById('loginEmail');
+      const loginPasswordInput = document.getElementById('loginPassword');
+      const loginMessage = document.getElementById('loginMessage');
+
+      if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          setFieldFeedback(loginEmailInput, null);
+          setFieldFeedback(loginPasswordInput, null);
+
+          const email = loginEmailInput.value.toLowerCase();
+          const password = loginPasswordInput.value;
+          const accounts = getAccounts();
+
+          const user = accounts.find(account =>
+            account.email === email && account.password === password
+          );
+
+          if (user) {
+            setFieldFeedback(loginEmailInput, true);
+            setFieldFeedback(loginPasswordInput, true);
+
+            localStorage.setItem('loggedInUser', JSON.stringify(user));
+            if (loginMessage) loginMessage.classList.add('d-none');
+
+            window.location.href = './index.html';
+          } else {
+            setFieldFeedback(loginEmailInput, false);
+            setFieldFeedback(loginPasswordInput, false);
+            displayAuthMessage(loginMessage, 'Invalid email or password. Please try again.', 'danger');
+          }
+        });
+      }
+
+      // --- Cleanup on Tab Switch ---
+      document.querySelectorAll('.nav-link').forEach(tab => {
+        tab.addEventListener('click', () => {
+          setFieldFeedback(loginEmailInput, null);
+          setFieldFeedback(loginPasswordInput, null);
+          if (loginMessage) loginMessage.classList.add('d-none');
+
+          setFieldFeedback(signupEmailInput, null);
+          setFieldFeedback(signupPasswordInput, null);
+          const signupNameInput = document.getElementById('signupName');
+          if (signupNameInput) signupNameInput.classList.remove('is-valid', 'is-invalid');
+          if (signupMessage) signupMessage.classList.add('d-none');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
